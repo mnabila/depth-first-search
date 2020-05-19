@@ -38,9 +38,7 @@ def dfs(graph: dict, start: str, stop: str):
             path.append(visit)
             if visit == stop:
                 break
-            if visit not in graph.keys():
-                pass
-            else:
+            if visit in graph.keys():
                 nodes = graph.get(visit)
                 nodes.reverse()
                 visited.extend(nodes)
